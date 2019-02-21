@@ -1,7 +1,3 @@
-# memester-web-pelican
-# Repo renamed to gangsta-web-pelican
-
-
 # First Steps:
     1. Prerquisite: Node, VS Code(preferred IDE) 
     2. Clone repo
