@@ -18,9 +18,6 @@ const config = {
     noInfo: false,
   },
   entry: [
-    'webpack-dev-server/client?http://127.0.0.1:8110',
-    'webpack/hot/only-dev-server',
-    'react-hot-loader/patch',
     `${APP_DIR}/index.jsx`,
   ],
   devtool: 'eval',
@@ -42,13 +39,10 @@ const config = {
     ],
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"dev"',
-    }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-  ]
+  ],
+  mode: 'development',
 };
 
 module.exports = config;

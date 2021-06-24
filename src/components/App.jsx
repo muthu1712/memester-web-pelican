@@ -1,20 +1,18 @@
-import React from 'react';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux'
-import Home from './Home'
+import React, { PureComponent } from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from '../reducers';
+import Home from './Home';
 
-const reducer = (initialState = 'Hello World') => {
-    return initialState;
-}
 const store = createStore(reducer);
-class App extends React.Component{
-    render(){
-        return(
-           <Provider store ={store}>
-                <Home />
-           </Provider>
-        )
-    }
+class App extends PureComponent {
+  render() {
+    return (
+      <Provider store={store}>
+        <Home />
+      </Provider>
+    );
+  }
 }
 
 export default App;

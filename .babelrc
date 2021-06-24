@@ -1,15 +1,9 @@
 {
 	"presets": [
-		"react",
-		"env",
-		"stage-0",
-		"stage-1",
-		"stage-2"
+		"@babel/react", 
+		"@babel/env"
 	],
 	"plugins": [
-		"react-hot-loader/babel",
-		"transform-object-rest-spread",
-		"transform-class-properties",
-		"transform-runtime"
+
 	]
 }
