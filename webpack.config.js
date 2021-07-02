@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, 'src');
 const DIST_DIR = path.resolve(__dirname, 'dist');
@@ -41,6 +42,7 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new ESLintPlugin(),
   ],
   mode: 'development',
 };
